@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="D6.css">
+    <title>D6 Exercise</title>
+</head>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+    
+<body id="backing">
+
+<h1>Oxford Phone Shop</h1>
+
+<table>
+    <tr> 
+     <td>Otterbox Phonecase 
+        <img src="otterbox.jpg" alt="Phonecase" width="100px" height="90px">
+        <P>High quality phonecase to protect your phone from accidents, £25.99</P>
+        <a href="https://www.amazon.co.uk/Otterbox-Symmetry-Stylish-Anti-Shock-iPhone-Black/dp/B01ITHHYDG/ref=
+        sr_1_4?crid
+        =2SLRYF8QVTWA1&keywords=otterbox&qid=1674560663&sprefix=otterb%2Caps%2C73&sr=8-4">Otterbox Phonecase</a>
+    </td>
+     <td>Jelly Phonecase
+        <img src="jellyphone.jpg" alt="case2" width="100px" height="90px">
+        <P>Stylish phonecase to protect your phone from drops, £20.99</P>
+        <a href="https://www.amazon.co.uk/ORNARTO-Liquid-Silicone-iPhone-inch-Mint/dp/B0814NRQR9/ref=sr_1_7_
+        sspa?crid=RZ4FWEJU2FM1&keywords=jelly+phone+case&qid=1674560732&sprefix=jelly+phonecas%2Caps%2C73&sr=
+        8-7-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&psc=1"> Jelly Phonecase</a>
+     </td>
+     <td>Car phone holder
+        <img src="carphone.jpg" alt="holder" width="100px" height="90px">
+        <P>Fix your phone to your windscreen for hands free acess, £15.75</P>
+        <a href="https://www.amazon.co.uk/Beikell-Adjustable-Holder-Cradle-Release-Black/dp/B0792Z94FF/ref=sr
+        _1_11?keywords=car+phone+holder&qid=1674560791&sprefix=car+phone%2Caps%2C89&sr=8-11">Car phone holder</a>
+     </td>
+    </tr>
+    <tr>
+     <td>Screen protector
+        <img src="screenprotector.jpg" alt="screenprotect" width="100px" height="90px">
+        <P>Protect your screen from scuffs and scratches, £7.99</P>
+        <a href="https://www.amazon.co.uk/JETech-3-Pack-Protector-6-1-Inch-Tempered/dp/B07GZSDHSK/ref=sr_1_5?
+        keywords=screen
+        +protector+iphone+11&qid=1674560865&sprefix=screen+protect%2Caps%2C75&sr=8-5">Screen Protector</a>
+     </td>
+     <td>Screen cleaner
+        <img src="cleaner.jpg" alt="cleaner" width="100px" height="90px">
+        <P>Keep your phone screen sparkling, £3.99</P>
+        <a href="https://www.amazon.co.uk/Betron-including-Microfibre-monitors-Smartphone-Blue/dp/B08Q1X3RQB/
+        ref=sr_1_7_sspa?crid=AVE3KW87YQPI&keywords=screen+cleaner&qid=1674560957&sprefix=screen+
+        cleaner%2Caps%2C83&sr=8-7-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9tdGY&psc=1">Screen cleaner</a>
+     </td>
+    </tr>
+</table>
+
+<label for="message">Write your message here</label>
+<textarea name="message" id="message" cols="30" rows="10"></textarea>
+<input type="submit" value="Post your message">
+    
+<footer>
+    <address id="shopAddy">
+        Oxford Phone Shop <br>
+        100 Oxford Road <br>
+        Oxfordshire <br>
+        OX1OPS
+    </address>
+
+</footer>
+
+
+<script>
+
+    const changeHeader = function () {
+        document.querySelector("h1").innerText = "OG phone saloon";
+
+   };
+   console.log(changeHeader);
+
+    const fakeAddress = function (){
+        document.getElementById("shopAddy").innerHTML = "69 Crash Cul-de-sac";
+        
+    };
+
+    const backEdit = function (){
+        document.getElementById("backing").style.background = "lightblue";
+
+    };
+
+    const toggleImageClass = function (){
+        let images = document.querySelectorAll("img")
+        for(let i=0; i<images.length; i++){
+            const singleImg = images[i];
+            singleImg.classList.toggle("hidden")
+        }
+    };
+
+
+    const getRandomColor = function (){
+        const red = Math.round(Math.random() * 255);
+        const green = Math.round(Math.random() * 255);
+        const blue = Math.round(Math.random() * 255);
+
+        return "rgb(" + red + "," + green + "," + blue + ")";
+    };
+
+    const setRandomColor = function (){
+        const randomColor = getRandomColor();
+        let prices = document.querySelectorAll(".price")
+        for (let i=0; i<prices.length; i++){
+            let singlePrice = prices[i]
+            singlePrice.style.color = randomColor
+        }
+    }
+
+
+   
+    
+
+</script>
+</body>
+</html>
